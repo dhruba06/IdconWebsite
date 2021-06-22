@@ -1,0 +1,658 @@
+/* ########################################################################################
+
+        DEFAULT VALUES:
+
+        Font Family            : Roboto Condensed
+
+        Greenish Blue          : #34c6d3 (Buttons, Icons, Links & Background)
+        Steel Gray             : #41464b (Headings)
+        Blue bayoux            : #64707b (Paragraphs)
+        White                  : #fff    (Text with Black background)
+        Black                  : #000    
+
+
+
+
+
+
+######################################################################################## */
+
+/*  GENERAL CSS */
+
+*,
+*::after,
+*::before{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+    height: 100%;
+}
+
+body{
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+h3{
+    color: #41464b;
+    text-transform: uppercase;
+}
+
+p{
+    color: #64707b;
+    font-size: 1.6rem;
+    font-weight: 300;
+}
+/* ##################################################
+
+                        HOME-SECTION
+
+################################################## */
+
+#home-cover{
+    background: url("../img/bg-home.jpg");
+    height: 95vh;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+}
+
+#home-content-box{
+    height: 100%;
+    width: 100%;
+    display: table;
+}
+
+#home-content-box-inner{
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+
+#home-heading h3{
+    color: #fff;
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin: 2rem 0 2rem 0;
+}
+
+/* ##################################################
+                        BUTTON (Generic)
+################################################## */
+
+.bg-parallax{
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+}
+
+
+/* ##################################################
+                        BUTTON (Generic)
+################################################## */
+
+.btn-general{
+    border-radius: 0.2rem;
+    font-size: 1.6rem;
+    font-weight: 400;
+    padding: 1.2rem 2.6rem;
+    text-transform: uppercase;
+}
+
+.btn-white{
+    border-color: #fff;
+    color: #fff;
+}
+
+.btn-white:hover, .btn-white:focus{
+    background-color: #fff;
+    color: #41464b;
+}
+
+.btn-blue{
+    border-color: #34c6d3;
+    color: #34c6d3;
+}
+
+.btn-blue:hover, .btn-blue:focus{
+    background-color: #34c6d3;
+    color: #fff;
+}
+
+.btn-back-to-top{
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    font-size: 2.2rem;
+    padding: 0.3rem 1.5rem;
+    border-radius: 0;
+    display: none;
+}
+
+/* ##################################################
+                        ANIMATE
+################################################## */
+#home-cover, #home-heading, #home-btn{
+    animation-duration: .5s;
+}
+
+#home-cover{
+    animation-delay: .1s;
+}
+
+#home-heading{
+    animation-delay: .5s;
+}
+
+#home-btn{
+    animation-delay: 1s;    
+}
+
+/* ##################################################
+                        CONTENT (Generic)
+################################################## */
+
+.content-box{
+    padding: 6rem 0 6rem 0;
+}
+
+.content-title h3{
+    font-size: 3rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.content-title-white h3{
+    color: #fff;
+}
+.content-title-underline{
+    height: 0.3rem;
+    width: 9rem;
+    background-color: #34c6d3;
+    margin: 0 auto 3rem auto;
+}
+
+/* ##################################################
+                        SERVICES
+################################################## */
+
+.service-item{
+    padding: 2rem 0 2rem 0;
+    margin-bottom: 2rem;
+    cursor: pointer;
+}
+
+.service-item-icon i{
+    color: #34c6d3;
+    float: left;
+    padding: 1.5rem;
+    margin-right: 2.5rem;
+    width: 7.5rem;
+    height: 7.5rem;
+    text-align: center;
+}
+
+.service-item:hover .service-item-icon i{
+    color: #fff;
+    background-color: #34c6d3;
+}
+
+.service-item-title h3{
+    font-size: 2rem;
+    font-weight: 400;
+    margin: 0 0 1rem 0;
+
+}
+
+.service-item-desc p{
+    padding-left: 10rem;
+}
+
+/* ##################################################
+                        ABOUT
+################################################## */
+
+#about-bg-diagonal{
+    width: 60%;
+    height: 700px;
+    float: right;
+    background-image: url(../img/bg-about.jpg);
+    border-left: 20rem solid #fff;
+    border-top: 70rem solid transparent;
+}
+
+#about-content-box{
+    float: left;
+    height: 700px;
+}
+
+#about-content-box-outer{
+    height: 100%;
+    width: 100%;
+    display: table;
+}
+
+#about-content-box-inner{
+    display: table-cell;
+    vertical-align: middle;
+}
+
+#about .content-title h3{
+    text-align: left;
+}
+
+#about .content-title-underline{
+    margin: 0 0 30px 0;
+}
+
+#about-desc p{
+    margin-bottom: 30px;
+}
+
+/* ##################################################
+                        WORK
+################################################## */
+
+.img-wrapper img{
+    height: 100%;
+    width: 100%;
+    transition: transform .5s ease;
+}
+
+.row.no-gutters [class*=col-] {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.img-wrapper img:hover{
+    transform: scale(1.5);
+    cursor: zoom-in;
+}
+
+.img-wrapper{
+    overflow: hidden;
+}
+
+/* ##################################################
+                        TEAM
+################################################## */
+.team-member{
+    margin: 0 1.5rem;
+}
+
+.team-member-info{
+    padding: 1rem 0 3rem 0;
+}
+
+h4.team-member-name{
+    font-size: 2.2rem;
+    font-weight: 700;
+    letter-spacing: 0.1rem;
+    padding-top: 2rem;
+}
+
+h4.team-member-designation{
+    color: #34c6d3;
+    font-size: 1.5rem;
+    font-weight: 700;
+    font-style: italic;
+    letter-spacing: 0.1rem;
+    margin-top: 0.5rem;
+}
+
+/* ##################################################
+                        SOCIAL
+################################################## */
+
+.social-list li{
+    list-style: none;
+    display: inline-block;
+    width: 3.2rem;
+    height: 3.2rem;
+    margin-right: 0.6rem;
+    margin-top: 1rem;
+}
+
+.social-icon i{
+    font-size: 1.7rem;
+}
+
+.icon-gray i{
+    color: #64707b;
+}
+
+.icon-white i{
+    color: #fff;
+}
+
+.social-icon i:hover{
+    color: #34c6d3;
+}
+
+/* ##################################################
+                        TESTIMONIALS
+################################################## */
+
+#testimonials-cover{
+    background-image: url("../img/testimonial-bg-01.jpg");
+}
+
+#testimonials .content-box {
+    background-color: rgba(0,0,0,0.1);
+}
+
+#customers-testimonials {
+    padding: 5rem 0;
+}
+
+.testimonial img {
+    max-width: 25rem;
+    margin: 0 auto;
+    
+}
+
+.testimonial blockquote{
+    border: 0;
+    font-family: Georgia, sans-serif;
+    font-style: italic;
+    color: #fff;
+    padding: 0.6rem 15rem;
+    text-align: center;
+    position: relative;
+}
+
+.testimonial blockquote p {
+    color: #fff;
+}
+
+.testimonial blockquote::before,
+.testimonial blockquote::after{
+    font-size: 3rem;
+    font-style: normal;
+    line-height: 1;
+    width: 3rem;
+    height: 3rem;
+    position: absolute;
+}
+
+.testimonial blockquote::before{
+    content: "\201C";
+    top: 0;
+    left: 30rem;
+  
+}
+
+.testimonial blockquote::after{
+    content: "\201D";
+    right: 30rem;
+    bottom: 0;
+    
+}
+
+.testimonial-author p{
+    color: #fff;
+    font-size: 1.7rem;
+}
+
+.testimonial-author p strong{
+    display: block;
+}
+
+/* ##################################################
+                        PRICING
+################################################## */
+.pricing-box{
+    border: 0.3rem solid #34c6d3;
+    padding: 5rem 0;
+    margin: 4rem 0;
+}
+
+h4.pricing-title{
+    background-color: #34c6d3;
+    color: #fff;
+    display: inline-block;
+    padding: 0.7rem 1.5rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 0 0 3rem 0;
+}
+
+h3.pricing-value{
+    font-size: 6rem;
+    font-weight: 700;
+}
+
+h3.pricing-value sup{
+    font-size: 2.8rem;
+    font-weight: normal;
+    vertical-align: super;
+}
+
+ul.pricing-spec{
+    list-style: none;
+    padding-left: 0;
+    margin: 2rem 0 6rem 0;
+}
+
+ul.pricing-spec li p {
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.pricing-box-lg{
+    padding: 9rem 0;
+    margin: 0;
+    background-color: #34c6d3;
+}
+
+.pricing-box-lg h4.pricing-title{
+    color: #34c6d3;
+    background-color: #fff;
+}
+
+.pricing-box-lg ul.pricing-spec li p{
+    color: #fff;
+}
+
+/* ##################################################
+                        STATS
+################################################## */
+
+#stats-cover{
+    background-image: url("../img/bg-stats.jpg");
+}
+
+#stats .content-box{
+    background-color: rgba(0,0,0,0.7);
+}
+
+.stats-item{
+    padding: 10rem 0;
+}
+
+.stats-item i{
+    color: #34c6d3;
+}
+
+.stats-item h2{
+    color: #fff;
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-top: 1.5rem;
+    margin-bottom: 0.1rem;
+}
+
+.stats-item p{
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 300;
+    margin-top: 0;
+}
+
+/* ##################################################
+                        CLIENTS
+################################################## */
+
+.client{
+    padding: 4rem 0;
+    margin-left: 1rem;
+}
+
+/* ##################################################
+                        CONTACT
+################################################## */
+
+footer{
+    background-color: #41464b;
+    padding-top: 3rem;
+    border-top: 0.5rem solid rgba(0,0,0,0.2);
+}
+
+#contact-left h3, #contact-right h3{
+    color: #fff;
+    font-size: 2.7rem;
+    font-weight: 700;
+}
+
+#contact-left p{
+    color: #fff;
+    margin-bottom: 3rem;
+}
+
+#contact-info{
+    background-image: url("../img/world-map1.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding: 1rem;
+}
+
+address{
+    color: #fff;
+}
+
+address strong, 
+#phone-fax-email strong{
+    letter-spacing: 0.1rem;
+}
+
+form .form-control{
+    background: transparent;
+    border-radius: 0;
+    border-color: #fff;
+    font-size: 1.7rem;
+    font-weight: 300;
+    padding: 0.8rem 1.6rem;
+    margin-bottom: 2rem;
+    color: #fff;
+}
+
+/* ##################################################
+                        FOOTER
+################################################## */
+
+#footer-bottom{
+    background-color: rgba(0,0,0,0.2);
+    padding: 3rem 0;
+    margin-top: 6rem;
+}
+
+#footer-copyrights p{
+    margin: 0;
+    color: #fff;
+}
+
+#footer-menu {
+    float: left;
+    color: #fff;
+    font-size: 1.6rem;
+    font-weight: 300;
+}
+
+#footer-menu ul{
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+#footer-menu ul li{
+    display: inline-block;
+}
+
+#footer-menu a{
+    color: #fff;
+    font-size: 1.6rem;
+    font-weight: 300;
+    margin: 0 1rem;
+    text-decoration: none;
+}
+
+#footer-menu a:hover{
+    color: #34c6d3;
+}
+
+/* ##################################################
+                        NAVIGATION
+################################################## */
+/* NOTE: idcon-top-nav --> remove from HTML so that page load time not show black navbar 
+and this process handel by jquery so if any doubt check custom.js file */
+.navbar{
+    padding: 2rem 0;
+    transition: all .5s ease-in-out;
+}
+
+a.navbar-brand{
+    color: #fff;
+    font-size: 2.2rem;
+    font-weight: 700;
+}
+
+.idcon-top-nav{
+    background: rgba(0,0,0,0.7);
+    padding: 0.7rem 0;
+}
+
+.idcon-nav-wrapper{
+    padding: 0 6rem;
+}
+
+.navbar-nav{
+    float: right;
+}
+
+.navbar-nav > li > a{
+    font-size: 1.5rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: #fff;
+    letter-spacing: 0.1rem;
+}
+
+.navbar-nav > li > a:hover, .navbar-nav > li > a:focus{
+    background: none;
+    color: #34c6d3;
+}
+
+.navbar-toggle{
+    background-color: rgba(0,0,0,0.1);
+    border: 1px solid #fff;
+    border-radius: 0;
+}
+
+.navbar-toggle .icon-bar{
+    background-color: #fff;
+}
+
+.navbar-collapse{
+    max-height: none ! important;
+}
+
+.idcon-top-nav ul.navbar-nav >li.active > a{
+    color: #34c6d3;
+}
